@@ -30,3 +30,7 @@ app.delete('/tasks/:id', (req, res) => {
   tasks = tasks.filter(t => t.id != req.params.id);
   res.json({ message: 'Task deleted' });
 });
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
